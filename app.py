@@ -22,10 +22,7 @@ def predict():
 
     return render_template("index.html",prediction_text="The country is expected to achieve {} medals".format(p))
 
-mode = "prod"
 
 if __name__ == "__main__":
-    if mode=="dev":
-        app.run(host='0.0.0.0',port=50100,debug=True)
-    else:
-        app.run(app,host='0.0.0.0',port=5000,threads=2)
+        app.run(host='0.0.0.0',port=5000,debug=True)
+    
